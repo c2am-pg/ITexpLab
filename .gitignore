@@ -1,3 +1,4 @@
 #Node Project Ignores
 node_modules
 package-lock.json
+np
