@@ -16,5 +16,10 @@ res.render("index",{user: "Cam",});
 app.get('/users/new', (req,res)=>{
     res.send('New User Form');
 });
-app.use('/posts',postRrouter);
+app.use('/posts',(req,res)=>{
+    res.send('Post List');
+});
+app.get('/posts/new', (req,res)=>{
+    res.send('New Post Form');
+});
 app.listen(3030);// port its ran on 
