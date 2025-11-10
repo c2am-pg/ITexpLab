@@ -1,7 +1,7 @@
 const express = require('express'); // turns express on 
 const app = express();// calling sets up server
 const userRouter= require('./routes/users');
-
+const postRouter= require('./routes/posts');
 app.set('view engine','ejs');
 
 app.get('/',(req,res)=>{
@@ -16,5 +16,5 @@ res.render("index",{user: "Cam",});
 app.get('/users/new', (req,res)=>{
     res.send('New User Form');
 });
-
+app.use('/posts',postRrouter);
 app.listen(3030);// port its ran on 
