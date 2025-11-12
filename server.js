@@ -16,6 +16,9 @@ res.render("index",{user: "Cam",});
 app.get('/users/new', (req,res)=>{
     res.send('New User Form');
 });
+app.get('/users/:id',(req,res)=>{
+    res.send('User data');
+});
 app.use('/posts',(req,res)=>{
     res.send('Post List');
 });
