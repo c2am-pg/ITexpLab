@@ -7,3 +7,4 @@ router.get('/new',(req,res)=>{
     res.send('New Post')
 });
 
+module.exports = router;
