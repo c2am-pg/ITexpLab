@@ -8,7 +8,7 @@ const router = express.Router();
 //    res.send(`Getting User data: ${req.params.id}`);
 //});
 router.get('/new', (req,res)=>{
-   // res.send('New User Form');
+       res.render('users/new', { firstName: "Please enter your name" });
 });
 router.post('/', (req,res)=>{
     //res.send("user created");

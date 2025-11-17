@@ -12,30 +12,23 @@ app.use('/users',userRouter);
 app.use('/posts',postRouter);
 app.get('/',(req,res)=>{
 console.log('Here');
-res.render("index",{user: "Cam",});
+res.render("new",{user: "Cam",});
 //res.status(500).send("Hello World");
 });//runs on acess
 
 //  app.get('/users', (req,res)=>{
-//     res.send('User List');
-// });
+//     res.send('User List');// });
 // app.get('/users/new', (req,res)=>{
-//     res.send('New User Form');
-// });
+//     res.send('New User Form');// });
 // app.get('/users/:id',(req,res)=>{
-//     res.send('User data');
-// });
+//     res.send('User data');// });
 // app.use('/posts',(req,res)=>{
-//     res.send('Post List');
-// });
+//     res.send('Post List');// });
 // app.get('/posts/new', (req,res)=>{
-//     res.send('New Post Form');
-// });
-
-app.get('new', (req,res)=>{
+//     res.send('New Post Form');// });
+app.get('/users/new', (req,res)=>{
     res.render('users/new',{firstName: "Please enter your name"});
 })
-
 app.listen(3030);// port its ran on 
 
 function logger(req,res,next){
