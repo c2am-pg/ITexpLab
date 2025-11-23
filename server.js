@@ -10,9 +10,10 @@ app.use(express.urlencoded({extended:true}));
 
 app.use('/users',userRouter);
 app.use('/posts',postRouter);
-app.get('/',(req,res)=>{
+
+app.get("/",(req,res)=>{
 console.log('Here');
-res.render("new",{user: "Cam",});
+res.render("index",{user: "Cam",});
 //res.status(500).send("Hello World");
 });//runs on acess
 
@@ -26,9 +27,6 @@ res.render("new",{user: "Cam",});
 //     res.send('Post List');// });
 // app.get('/posts/new', (req,res)=>{
 //     res.send('New Post Form');// });
-app.get('/users/new', (req,res)=>{
-    res.render('users/new',{firstName: "Please enter your name"});
-})
 app.listen(3030);// port its ran on 
 
 function logger(req,res,next){
